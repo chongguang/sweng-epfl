@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SwEng 2014 Final Exam &mdash; CS-305: Software Engineering - Final</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'fall-2014',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="CS-305: Software Engineering - Final" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Software Engineering Final</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SwEng 2014 Final Exam</a><ul>
+<li><a class="reference internal" href="#commit-early-and-often">Commit early and often!</a></li>
+<li><a class="reference internal" href="#merge-branches-to-master">Merge branches to master!</a></li>
+<li><a class="reference internal" href="#push-all-branches-to-github">Push all branches to Github!</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#problem-statement">Problem Statement</a><ul>
+<li><a class="reference internal" href="#task-1-20-points">Task #1 (20 points)</a></li>
+<li><a class="reference internal" href="#task-2-30-points">Task #2 (30 points)</a></li>
+<li><a class="reference internal" href="#task-3-30-points">Task #3 (30 points)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sweng-2014-final-exam">
+<h1>SwEng 2014 Final Exam<a class="headerlink" href="#sweng-2014-final-exam" title="Permalink to this headline">¶</a></h1>
+<p>In this final exam, you will add functionality to an existing piece
+of code, using the software engineering practices you learned in this class.
+You will be working on a code base that provides operations on binary
+trees. Initially, the operations are basic &#8212; iterating over the elements of the
+tree. Then, the code base evolves; the tree gets the ability to represent
+simple mathematical expressions, and then an interpreter and expression evaluator are
+added.</p>
+<p>The goal of this exam is to enable you to prove:</p>
+<ul class="simple">
+<li>You understand version control systems (git) and coding workflow.</li>
+<li>You understand the specification of an interface and can implement it
+correctly.</li>
+<li>You understand the design patterns seen in lecture and can implement
+them.</li>
+<li>You are able to test code.</li>
+<li>You are able to debug code.</li>
+</ul>
+<p>This practical part of the exam is worth 80 points in total. Try to get
+as many as possible, but don&#8217;t panic if you get less than 80.</p>
+<p>There are three tasks in this part the exam, of varying difficulty. The three tasks are
+independent; if you get stuck on one, you can switch to the others.</p>
+<p><strong>WARNING:</strong> Most of this exam will be graded
+automatically. The grading scripts are very pedantic.
+Please be careful not to modify the tests that we provided in your repository,
+and make sure that the tests can still compile and run on the version of the
+code you hand in.</p>
+<p><strong>Code that does not test properly because of a naming error will be
+marked as incorrect.</strong></p>
+<div class="section" id="commit-early-and-often">
+<h2>Commit early and often!<a class="headerlink" href="#commit-early-and-often" title="Permalink to this headline">¶</a></h2>
+<p>Commit and push frequently, ideally after
+every task. This ensures that you will get points for all tasks you
+complete.</p>
+</div>
+<div class="section" id="merge-branches-to-master">
+<h2>Merge branches to master!<a class="headerlink" href="#merge-branches-to-master" title="Permalink to this headline">¶</a></h2>
+<p>The problem statement requires you to write code in various branches of the repository.
+After implementing a feature, you are required to merge the branch into master.
+Be careful not to break the master branch! You will still receive points if you
+only push changes to the branches, without merging, but for maximum points,
+correctly functioning code for each problem needs to be merged into master by
+the end of the exam.</p>
+</div>
+<div class="section" id="push-all-branches-to-github">
+<h2>Push all branches to Github!<a class="headerlink" href="#push-all-branches-to-github" title="Permalink to this headline">¶</a></h2>
+<p>Make sure that when you commit on a certain branch, you also push that branch
+to Github, not only the <cite>master</cite> branch. For example, if you make changes in
+the <cite>iterator</cite> branch, make sure you execute <tt class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">iterator</span></tt> (or
+an equivalent command).</p>
+</div>
+</div>
+<div class="section" id="problem-statement">
+<h1>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="task-1-20-points">
+<h2>Task #1 (20 points)<a class="headerlink" href="#task-1-20-points" title="Permalink to this headline">¶</a></h2>
+<p>Switch to the <cite>iterator</cite> branch in the repo. It implements an in-order iterator
+for the tree. The iterator has a single bug, where it violates the <a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html">Iterator
+specification</a>.</p>
+<ul class="simple">
+<li>Write a test to show the bug.
+(A new test in <tt class="docutils literal"><span class="pre">ch.epfl.sweng.test.InOrderIteratorTest</span></tt>)</li>
+<li>Commit the test that shows the bug.</li>
+<li>Fix the bug.</li>
+<li>Commit the fix.</li>
+<li>Make sure that your test passes on your fixed code and that the
+existing tests of the iterator still pass.</li>
+<li>Push the <cite>iterator</cite> branch to Github.</li>
+<li>Merge the branch into master.</li>
+<li>Push the <cite>master</cite> branch to Github.</li>
+</ul>
+</div>
+<div class="section" id="task-2-30-points">
+<h2>Task #2 (30 points)<a class="headerlink" href="#task-2-30-points" title="Permalink to this headline">¶</a></h2>
+<p>Switch to the <cite>evaluator</cite> branch in the repo. It has a framework that allows you
+to implement a simple expression evaluator using the visitor pattern. Due to the
+missing code, the code on the branch does not compile yet and the existing test
+currently fails. The evaluator should throw an <cite>IllegalArgumentException</cite> if the
+expression tree is invalid (if <tt class="docutils literal"><span class="pre">AddNode</span></tt> or <tt class="docutils literal"><span class="pre">MultiplyNode</span></tt> do not have exactly
+two children).</p>
+<ul class="simple">
+<li>Fill in the missing parts of the evaluator. You can write additional private
+methods if you want, but do not change the signatures of methods we provided.</li>
+<li>Commit the code.</li>
+<li>Write one new test that verifies that the evaluator correctly evaluates a valid
+expression tree.
+(A new test in <tt class="docutils literal"><span class="pre">ch.epfl.sweng.test.EvalExpressionVisitorTest</span></tt>)</li>
+<li>Write one new test that verifies that the evaluator correctly throws an
+<tt class="docutils literal"><span class="pre">IllegalArgumentException</span></tt> for invalid expression trees.
+(A new test in <tt class="docutils literal"><span class="pre">ch.epfl.sweng.test.EvalExpressionVisitorTest</span></tt>)</li>
+<li>Commit your tests.</li>
+<li>Make sure that your tests pass and that our test also passes.</li>
+<li>Push the <cite>evaluator</cite> branch to Github.</li>
+<li>Merge the branch into <cite>master</cite>.</li>
+<li>Push the <cite>master</cite> branch to Github.</li>
+</ul>
+</div>
+<div class="section" id="task-3-30-points">
+<h2>Task #3 (30 points)<a class="headerlink" href="#task-3-30-points" title="Permalink to this headline">¶</a></h2>
+<p>Switch to the <cite>interpreter</cite> branch in the repo. It has the implementation of a
+simple mathematical expression interpreter supporting addition and multiplication.</p>
+<p>The interpreter has two bugs. It accepts expressions that are not valid (it
+does not throw <tt class="docutils literal"><span class="pre">InvalidSyntaxException</span></tt>, even though it should). The
+<tt class="docutils literal"><span class="pre">InterpreterTest</span></tt> has one test that highlights one of the bugs. It also has a
+test that checks that the interpreter correctly parses a valid expression.</p>
+<ul class="simple">
+<li>Fix the bug highlighted by the test that currently fails.</li>
+<li>Commit the code.</li>
+<li>Write an additional test, highlighting the other bug.
+(A new test in <tt class="docutils literal"><span class="pre">ch.epfl.sweng.test.InterpreterTest</span></tt>)</li>
+<li>Commit the code.</li>
+<li>Fix the second bug.</li>
+<li>Commit the code.</li>
+<li>Make sure that both tests we provided pass.</li>
+<li>Push the <cite>interpreter</cite> branch to Github.</li>
+<li>Merge the branch into master.</li>
+<li>Push the <cite>master</cite> branch to Github.</li>
+</ul>
+<p><strong>Hint.</strong>
+You do not need to fully understand the interpreter in order to fix the bugs.
+Try to use the debugging tools at hand (the Eclipse debugger, printing) to
+understand the test executions that highlight the bug. The simpler the test,
+the shorter and cleaner the execution. You can call <tt class="docutils literal"><span class="pre">tokenizer.toString()</span></tt> to
+see the current element that is being looked at by the interpreter. You can
+either print <tt class="docutils literal"><span class="pre">tokenizer.toString()</span></tt>, or you can inspect it in the <tt class="docutils literal"><span class="pre">Expressions</span></tt>
+debug window in Eclipse (<tt class="docutils literal"><span class="pre">Window-&gt;Show</span> <span class="pre">View-&gt;Expressions</span></tt>).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Software Engineering Final</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, EPFL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>

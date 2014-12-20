@@ -1,0 +1,122 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaClasses.cpp:136), pid=2300, tid=3676
+#  fatal error: Invalid layout of preloaded class
+#
+# JRE version:  (7.0_67-b01) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.65-b04 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002808000):  JavaThread "Unknown thread" [_thread_in_vm, id=3676, stack(0x00000000029a0000,0x0000000002aa0000)]
+
+Stack: [0x00000000029a0000,0x0000000002aa0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002808000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3676, stack(0x00000000029a0000,0x0000000002aa0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 1.230 loading class 0x000000000284e6e0 done
+Event: 1.231 loading class 0x000000000284e100 done
+Event: 1.231 loading class 0x000000000284e0e0
+Event: 1.231 loading class 0x0000000002856230
+Event: 1.231 loading class 0x0000000002856230 done
+Event: 1.231 loading class 0x0000000002856260
+Event: 1.231 loading class 0x0000000002856260 done
+Event: 1.232 loading class 0x0000000002856290
+Event: 1.232 loading class 0x0000000002856290 done
+Event: 1.232 loading class 0x000000000284e0e0 done
+
+
+Dynamic libraries:
+0x000000013f150000 - 0x000000013f183000 	C:\Program Files\Java\jre7\bin\javaw.exe
+0x00000000779f0000 - 0x0000000077b99000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000778d0000 - 0x00000000779ef000 	C:\Windows\system32\kernel32.dll
+0x000007fefd860000 - 0x000007fefd8cc000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefe170000 - 0x000007fefe24b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feff810000 - 0x000007feff8af000 	C:\Windows\system32\msvcrt.dll
+0x000007feffce0000 - 0x000007feffcff000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefdae0000 - 0x000007fefdc0d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077690000 - 0x000000007778a000 	C:\Windows\system32\USER32.dll
+0x000007fefdc10000 - 0x000007fefdc77000 	C:\Windows\system32\GDI32.dll
+0x000007fefe810000 - 0x000007fefe81e000 	C:\Windows\system32\LPK.dll
+0x000007fefe0a0000 - 0x000007fefe169000 	C:\Windows\system32\USP10.dll
+0x000007fefc710000 - 0x000007fefc904000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefe540000 - 0x000007fefe5b1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe5c0000 - 0x000007fefe5ee000 	C:\Windows\system32\IMM32.DLL
+0x000007fefde60000 - 0x000007fefdf69000 	C:\Windows\system32\MSCTF.dll
+0x000007fefd500000 - 0x000007fefd540000 	C:\Windows\system32\nvinitx.dll
+0x000000000f000000 - 0x000000000f006000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x000007fefa6b0000 - 0x000007fefa704000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x000007fefdc80000 - 0x000007fefde57000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefd780000 - 0x000007fefd7b6000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefe460000 - 0x000007fefe537000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefe250000 - 0x000007fefe453000 	C:\Windows\system32\ole32.dll
+0x000007fefd9e0000 - 0x000007fefd9fa000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fefa660000 - 0x000007fefa6a3000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x0000000073f60000 - 0x0000000074032000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x000000006b3e0000 - 0x000000006bbb2000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fef8420000 - 0x000007fef8429000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefe7c0000 - 0x000007fefe80d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefdad0000 - 0x000007fefdad8000 	C:\Windows\system32\NSI.dll
+0x000007fefd7d0000 - 0x000007fefd80b000 	C:\Windows\system32\WINMM.dll
+0x0000000077bc0000 - 0x0000000077bc7000 	C:\Windows\system32\PSAPI.DLL
+0x0000000073f50000 - 0x0000000073f5f000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x0000000073f20000 - 0x0000000073f48000 	C:\Program Files\Java\jre7\bin\java.dll
+0x0000000073b50000 - 0x0000000073b85000 	C:\Program Files\Java\jre7\bin\jdwp.dll
+0x0000000074070000 - 0x0000000074078000 	C:\Program Files\Java\jre7\bin\npt.dll
+0x0000000073f00000 - 0x0000000073f15000 	C:\Program Files\Java\jre7\bin\zip.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:52972 -Dfile.encoding=GBK -Xbootclasspath:C:\Users\chongguang\EPFL\SwEng\adt-bundle-windows-x86_64-20140702\sdk\platforms\android-19\android.jar 
+java_command: ch.epfl.sweng.quizapp.QuizActivity
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_67
+PATH=E:\app\chongguang\product\11.2.0\client_1;F:\app\chongguang\product\11.2.0\client_1;D:\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\matlab\implementation\bin\win32;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Ruby193\bin;C:\Program Files (x86)\Java\jdk1.7.0_10\bin;C:\Users\chongguang\play-2.2.1;C:\Users\chongguang\osm2pgsql-master;C:\Users\chongguang\osm2pgsql\Win32;C:\Python25;C:\Python25\Scripts;C:\Program Files (x86)\HOTOSM\bin;C:\Program Files (x86)\HOTOSM\lib;C:\Program Files\nodejs\;C:\Program Files (x86)\sbt\;C:\Program Files\Java\jdk1.7.0_67\bin;C:\Users\chongguang\ant\bin;C:\Ruby193\bin;C:\Program Files (x86)\Java\jdk1.7.0_10\bin;C:\Users\chongguang\play-2.2.1;C:\Users\chongguang\osm2pgsql-master;C:\Users\chongguang\osm2pgsql\Win32;E:\protoc\;C:\Users\chongguang\AppData\Roaming\npm;C:\Users\chongguang\ant\bin
+USERNAME=chongguang
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 8269040k(4199328k free), swap 16536216k(11381920k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.65-b04) for windows-amd64 JRE (1.7.0_67-b01), built on Jul 25 2014 08:55:00 by "java_re" with unknown MS VC++:1600
+
+time: Wed Oct 01 14:29:36 2014
+elapsed time: 1 seconds
+
